@@ -10,8 +10,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        int charLength = sizeof(char);
+        int intLength = sizeof(int);
+        int shortIntLength = sizeof(short int);
+        int longLength = sizeof(long);
+        int floatLength = sizeof(float);
+        int doubleLength = sizeof(double);
+        
+        printf("%d\n",charLength);
     }
     return 0;
 }
