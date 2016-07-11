@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7E13211D3369A400C45CD5 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E13201D3369A400C45CD5 /* Test.m */; };
 		ECAF95401D2E5132005A8E06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAF953F1D2E5132005A8E06 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC7E13201D3369A400C45CD5 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		ECAF953C1D2E5132005A8E06 /* CLanguageLearn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CLanguageLearn; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAF953F1D2E5132005A8E06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				ECAF953F1D2E5132005A8E06 /* main.m */,
+				EC7E13201D3369A400C45CD5 /* Test.m */,
 			);
 			path = CLanguageLearn;
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECAF95401D2E5132005A8E06 /* main.m in Sources */,
+				EC7E13211D3369A400C45CD5 /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +243,7 @@
 				ECAF95451D2E5132005A8E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
