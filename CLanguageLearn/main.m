@@ -11,29 +11,15 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int count = 10000;
         
-        FILE *fp, *fp2;
+        int i = 31;
         
-        fp = fopen("/Users/xiexiaolong1/Desktop/sdxl.txt", "r+");
-        fp2 = fopen("/Users/xiexiaolong1/Desktop/cfile.txt", "r+");
+        char hex[6];
         
-        if (fp == NULL && fp2 == NULL) {
-            printf("打开文件失败");
-            return 0;
-        }
+        sprintf(hex, "%x", i);
         
-        char ch[count];
+        printf("hex: %s\n",hex);
         
-        fgets(ch, count, fp);
-        
-        while (fgets(ch, count, fp) != NULL) {
-            puts(ch);
-//            fputs(ch, fp2);
-        }
-        
-        fclose(fp);
-        fclose(fp2);
     }
     return 0;
 }
