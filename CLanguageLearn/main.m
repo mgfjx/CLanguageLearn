@@ -11,6 +11,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        int count = 10000;
+        
         FILE *fp, *fp2;
         
         fp = fopen("/Users/xiexiaolong1/Desktop/sdxl.txt", "r+");
@@ -21,13 +23,13 @@ int main(int argc, const char * argv[]) {
             return 0;
         }
         
-        char ch[100];
+        char ch[count];
         
-        fgets(ch, 100, fp);
+        fgets(ch, count, fp);
         
-        while (fgets(ch, 100, fp) != NULL) {
-//            puts(ch);
-            fputs(ch, fp2);
+        while (fgets(ch, count, fp) != NULL) {
+            puts(ch);
+//            fputs(ch, fp2);
         }
         
         fclose(fp);
