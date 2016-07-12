@@ -8,39 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+long factorial(int num){
+    
+    if (num == 1) return 1;
+    
+    long result;
+    result = num * factorial(num - 1);
+    
+    return result;
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int count = 100;
+        printf("%ld\n",factorial(12));
         
-        FILE *fp;
-        if ((fp = fopen("/Users/xiexiaolong1/Desktop/cfile.txt", "r")) == NULL) {
-            printf("文件打开失败");
-            exit(0);
-        }
-        
-        char ch[count];
-        
-        int i = 0;
-        
-        while (1){
-            
-            if(fgets(ch, count, fp) == NULL){
-                rewind(fp);
-                printf("\n");
-                i++;
-                fgets(ch, count, fp);
-            }
-            
-            if (i == 10) {
-                break;
-            }
-            
-            printf("%s",ch);
-        }
-        
-        
-        fclose(fp);
     }
     return 0;
 }
