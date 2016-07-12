@@ -8,20 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-long factorial(int num){
+int MonkeyPeach(int day){
     
-    if (num == 1) return 1;
+    int allPeachs = 1;
+    while (day-1) {
+        
+        allPeachs = (allPeachs + 1) * 2;
+        day --;
+    }
     
-    long result;
-    result = num * factorial(num - 1);
-    
-    return result;
+    return allPeachs;
 }
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        printf("%ld\n",factorial(12));
+        printf("%d\n",MonkeyPeach(10));
         
     }
     return 0;
