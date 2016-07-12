@@ -11,15 +11,36 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        int count = 100;
         
-        int i = 31;
+        FILE *fp;
+        if ((fp = fopen("/Users/xiexiaolong1/Desktop/cfile.txt", "r")) == NULL) {
+            printf("文件打开失败");
+            exit(0);
+        }
         
-        char hex[6];
+        char ch[count];
         
-        sprintf(hex, "%x", i);
+        int i = 0;
         
-        printf("hex: %s\n",hex);
+        while (1){
+            
+            if(fgets(ch, count, fp) == NULL){
+                rewind(fp);
+                printf("\n");
+                i++;
+                fgets(ch, count, fp);
+            }
+            
+            if (i == 10) {
+                break;
+            }
+            
+            printf("%s",ch);
+        }
         
+        
+        fclose(fp);
     }
     return 0;
 }
