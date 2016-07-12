@@ -8,28 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-double BuyApple(int limitNumer, double price){
+int AnyPowerLastThreeNumber(){
     
-    int apples = 2;
-    int day = 1;
-    while (true) {
-        
-        int lastDay = apples;
-        apples += apples*2;
-        if (apples > limitNumer) {
-            apples = lastDay;
-            break;
-        }
-        day++;
-    }
+    int x, y;
+    printf("输入x的y次幂x^y(e.g:x y):");
+    scanf("%d %d", &x, &y);
     
-    return apples * price / day;
+    int r = (int)pow(x, y);
+    
+    return r > 100 ? r % 1000 : r;
 }
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        printf("%lf\n",BuyApple(100, 0.8));
+        printf("%d\n",AnyPowerLastThreeNumber());
         
     }
     return 0;
