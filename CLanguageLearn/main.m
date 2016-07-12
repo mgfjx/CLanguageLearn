@@ -8,42 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-int IsLeapYear(int year){
-    
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-        return 1;
-    }else{
-        return 0;
-    }
-}
-
-int CountDay(int year, int month, int day){
-    
-    int leapMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31};
-    int normalMonth[] = {31,29,31,30,31,30,31,31,30,31,30,31};
-    
-    int sum = 0;
-    if (IsLeapYear(year) == 1) {
-        for (int i = 0; i < month - 1; i++) {
-            sum += leapMonth[i];
-        }
-    }else{
-        for (int i = 0; i < month - 1; i++) {
-            sum += normalMonth[i];
-        }
-    }
-    
-    sum += day;
-    
-    return sum;
-}
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int year, month, day;
-        printf("输入年月日:");
-        scanf("%d%d%d",&year, &month, &day);
-        printf("是该年的第%d天\n", CountDay(year, month, day));
+        
+        int female = 5;
+        int male = 3;
+        CGFloat litter = 1;
+        
+        for (int x = 0; x <= 100/5; x++) {
+            for (int y = 0; y <= 100/3; y++) {
+                for (int z = 0; z <= 100/3; z++) {
+                    
+                    int price = female * x + male * y + z * litter;
+                    int count = x + y + z * 3 ;
+                    
+                    if (price == 100 && count == 100) {
+                        printf("x = %d, y = %d, z = %d\n", x, y, z);
+                    }
+                    
+                }
+            }
+        }
         
     }
     return 0;
