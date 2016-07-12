@@ -8,22 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-int MonkeyPeach(int day){
+double BuyApple(int limitNumer, double price){
     
-    int allPeachs = 1;
-    while (day-1) {
+    int apples = 2;
+    int day = 1;
+    while (true) {
         
-        allPeachs = (allPeachs + 1) * 2;
-        day --;
+        int lastDay = apples;
+        apples += apples*2;
+        if (apples > limitNumer) {
+            apples = lastDay;
+            break;
+        }
+        day++;
     }
     
-    return allPeachs;
+    return apples * price / day;
 }
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        printf("%d\n",MonkeyPeach(10));
+        printf("%lf\n",BuyApple(100, 0.8));
         
     }
     return 0;
